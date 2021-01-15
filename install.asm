@@ -119,7 +119,7 @@ entryyes:  ldi     high instalmsg      ; display skipped message
            phi     rd
            ldi     low fildes
            plo     rd
-           ldi     1                   ; create if it does not exist
+           ldi     9                   ; create if it does not exist, set executable
            plo     r7
            sep     scall               ; open/create the file
            dw      o_open
